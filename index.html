@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="QR Express : transformez un texte ou un lien en QR code, gratuitement et sans inscription.">
+  <title>QR Express — Générateur de QR codes</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="entete">
+    <div class="conteneur entete-contenu">
+      <a class="logo" href="index.html"><span class="logo-icone">▣</span> QR Express</a>
+      <nav>
+        <a class="actif" href="index.html">Accueil</a>
+        <a href="historique.html">Historique</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="conteneur">
+    <section class="intro">
+      <h1>Créez votre QR code en un clic</h1>
+      <p>Saisissez un texte ou un lien, générez le QR code, puis téléchargez-le en PNG. Tout se passe dans votre navigateur : aucune donnée n'est envoyée sur Internet.</p>
+    </section>
+
+    <section class="grille">
+      <div class="panneau">
+        <h2>Votre contenu</h2>
+        <label for="texte">Texte ou lien (URL)</label>
+        <textarea id="texte" rows="5" maxlength="1000" placeholder="Ex. : https://monsite.com"></textarea>
+        <div class="compteur" id="compteur">0 / 1000</div>
+
+        <div class="boutons">
+          <button id="btn-generer" class="btn btn-principal" type="button">Générer mon QR code</button>
+          <button id="btn-effacer" class="btn btn-secondaire" type="button">Effacer</button>
+        </div>
+        <p id="message" class="message" role="status" hidden></p>
+      </div>
+
+      <div class="panneau apercu-panneau">
+        <h2>Aperçu</h2>
+        <div id="apercu" class="apercu">
+          <p id="apercu-vide" class="apercu-vide">Votre QR code apparaîtra ici.</p>
+          <div id="resultat" hidden>
+            <canvas id="qr-canvas" aria-label="QR code généré"></canvas>
+            <button id="btn-telecharger" class="btn btn-principal" type="button">Télécharger en PNG</button>
+          </div>
+        </div>
+        <p id="avertissement" class="avertissement" hidden>⚠ Vérifiez bien ce lien avant de partager votre QR code : toute personne qui le scanne sera redirigée vers cette adresse.</p>
+      </div>
+    </section>
+
+    <section class="usages">
+      <h2>À quoi ça sert ?</h2>
+      <ul>
+        <li>🛍️ Partager le lien de sa boutique</li>
+        <li>🍽️ Afficher le menu en ligne d'un restaurant</li>
+        <li>📇 Partager ses coordonnées facilement</li>
+        <li>💬 Transmettre un message ou un texte</li>
+        <li>🪧 Ajouter un QR code sur une affiche ou une carte de visite</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur">© 2026 QR Express — Vos QR codes restent sur votre appareil</div>
+  </footer>
+
+  <script src="js/qrcode.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

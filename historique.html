@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Historique — QR Express</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="entete">
+    <div class="conteneur entete-contenu">
+      <a class="logo" href="index.html"><span class="logo-icone">▣</span> QR Express</a>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a class="actif" href="historique.html">Historique</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="conteneur">
+    <section class="intro">
+      <h1>Historique de vos QR codes</h1>
+      <p>Retrouvez vos dernières créations. Elles sont conservées dans ce navigateur (localStorage) et ne sont pas accessibles depuis un autre appareil.</p>
+    </section>
+
+    <div class="barre-historique">
+      <span id="nombre" class="nombre"></span>
+      <button id="btn-tout-supprimer" class="btn btn-danger petit" type="button" hidden>Tout supprimer</button>
+    </div>
+
+    <div id="liste" class="liste"></div>
+
+    <div id="historique-vide" class="panneau vide" hidden>
+      <p>Aucun QR code pour le moment.</p>
+      <a class="btn btn-principal" href="index.html">Créer mon premier QR code</a>
+    </div>
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur">© 2026 QR Express — Vos QR codes restent sur votre appareil</div>
+  </footer>
+
+  <script src="js/qrcode.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/historique.js"></script>
+</body>
+</html>
